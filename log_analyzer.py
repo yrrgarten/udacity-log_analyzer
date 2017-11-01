@@ -21,7 +21,7 @@ def create_view_toparticles(db):
             try:
                 c.execute(c_sql)
             except psycopg2.Error, e:  # catches 'relation ... already exists'
-                print (e)
+                print(e)
     conn.close()
 
 
@@ -40,7 +40,7 @@ def get_most_popular_articles(db):
                 c.execute(c_sql)
                 result = c.fetchall()
             except psycopg2.Error, e:
-                print (e)
+                print(e)
     conn.close()
     return(result)
 
@@ -61,7 +61,7 @@ def get_most_popular_authors(db):
                 c.execute(c_sql)
                 result = c.fetchall()
             except psycopg2.Error, e:
-                print (e)
+                print(e)
     conn.close()
     return(result)
 
@@ -87,7 +87,7 @@ def get_days_high_error_rate(db, threshold):
                 c.execute(c_sql, (threshold,))
                 result = c.fetchall()
             except psycopg2.Error, e:
-                print (e)
+                print(e)
     conn.close()
     return(result)
 
