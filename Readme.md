@@ -10,6 +10,15 @@ This script outputs the
 from the 'newsdata' SQL provided by Udacity for their Full Stack Developer
 Nanodegree.
 
+The actual database can be obtained from Udacity Full Stack Developer course
+as a Vagrant image (Ubuntu with PostgreSQL server). You need to be enrolled in
+the course. The database content can be obtained through the project page on
+the lesson. Follow the instruction provided in the course material to set it
+up.
+
+The script connects to the db-server from localhost using psycopg2 as DB-API.
+The logical db name is 'news' and can be changed in the script if necessary.
+
 
 # Usage
 
@@ -35,6 +44,7 @@ invoked:
         a.author
     ORDER BY
         views DESC
+
 
 # To-Do / Issues
 
